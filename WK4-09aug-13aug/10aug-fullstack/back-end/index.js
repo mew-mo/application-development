@@ -2,9 +2,10 @@
 const express = require('express'); //includes express
 const app = express(); //calls the express method
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');  //mongoooose for connecting and talking to mongodb
 const cors = require('cors'); //for the cross origin restriction policy -- cross origin resource sharing
 const bcrypt = require('bcryptjs'); //for encryption and decryption of data
-
+const config = require('./config.json'); //config that contains my user, password and cluster name  :>
 // requiring our data
 const product = require('./products.json');
 
@@ -23,6 +24,17 @@ app.use(cors()); // calling cors
 
 app.get('/',(req,res)=> res.send('hello from the backend'));
 // sends to the browser!!
+
+// https://mongoosejs.com/docs/connections.html is where this code is from
+// after cluster0 is the lil thing u3mpr that identifies u. like a customer code
+mongoose.connect(`mongodb+srv://${config.MONGO_USER}:${config.MONGO_PASSWORD}@cluster0.${config.MONGO_CLUSTER_NAME}.mongodb.net/School?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})//;
+.then(()=> console.log('db connected yeahh'))
+.catch(err=> {
+  console.log(`errorrr oh no DBConnectionError: ${err.message}`);
+});
+// ur connection string comes from mongodb cluster connect. add ur password and ur database name (case sensitive)
+// remove the semicolon (i commented it out) then type then n catch for the whole responses thing
+// useUnifiedTopologyis a new thing bc the old method is deprecated, you just have to slap it in there to make it work
 
 // get method to access data from products.json
 // routing to the endpoint... /allProducts on the end of your browser url is how to make the request !! that makes sense... wow!! this is literally building the endpoint, this one is local though.
