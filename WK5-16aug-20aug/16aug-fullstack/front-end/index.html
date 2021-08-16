@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../front-end/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- dont forget directory issues can happen easily. get that ./ or ../ in there lolol -->
+  <link rel="stylesheet" href="./css/custom.css">
+  <title>fullstack apping</title>
+</head>
+<body>
+  <h1 class="jumbotron text-info big-title">MONGODB : FRONT END EDITION</h1>
+  <div class="nav row">
+    <div class="col-4">
+      <button class="btn btn-info home-btn">Home</button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn-info view-btn">View All Products</button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn-info admin-btn">Admin</button>
+    </div>
+  </div>
+
+  <div class="admin-nav">
+    <button class="btn btn-info reg-btn">
+      Register
+    </button>
+    <button class="btn btn-info login-btn">
+      Log In
+    </button>
+  </div>
+
+  <div class="form-login">
+    <form>
+      <!-- <div class="form-group"> -->
+        <label for="loginEmail">Email address</label>
+        <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+      <!-- </div> -->
+      <!-- <div class="form-group"> -->
+        <label for="loginPass" class="password-label">Password</label>
+        <input type="password" class="form-control" id="loginPass" placeholder="Password">
+      <!-- </div> -->
+      <button type="submit" class="btn btn-primary">Log In</button>
+    <!-- </form> -->
+  </div>
+
+  <div class="form-register">
+    <form>
+      <!-- <div class="form-group"> -->
+        <label for="regEmail">Email address</label>
+        <input type="email" class="form-control" id="regEmail" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <br>
+      <!-- </div> -->
+      <!-- <div class="form-group"> -->
+        <label for="regPass" class="password-label">Password</label>
+        <input type="password" class="form-control" id="regPass" placeholder="Password">
+      <!-- </div> -->
+      <button type="submit" class="btn btn-primary">Register</button>
+    <!-- </form> -->
+  </div>
+
+  <div id="result" class="row">
+  </div>
+
+  <script src="../front-end/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../front-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "MONGO_USER" : "",
+  "MONGO_PASSWORD" : "",
+  "MONGO_CLUSTER_NAME" : ""
+}
+
+get rid of the 0 in the filename, insert the values and then delete this line :3
