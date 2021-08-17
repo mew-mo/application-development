@@ -37,22 +37,27 @@
   <div class="form-login">
     <form>
       <!-- <div class="form-group"> -->
-        <label for="loginEmail">Email address</label>
-        <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+        <label for="loginUser">Username</label>
+        <input type="Username" class="form-control" id="loginUser" aria-describedby="userHelp" placeholder="Enter username">
       <!-- </div> -->
       <!-- <div class="form-group"> -->
         <label for="loginPass" class="password-label">Password</label>
         <input type="password" class="form-control" id="loginPass" placeholder="Password">
       <!-- </div> -->
-      <button type="submit" class="btn btn-primary">Log In</button>
+      <button type="submit" class="btn btn-primary" id="loginBtn">Log In</button>
+      <button type="submit" class="btn btn-secondary" id="logoutBtn">Log Out</button>
+
     <!-- </form> -->
   </div>
 
   <div class="form-register">
     <form>
       <!-- <div class="form-group"> -->
-        <label for="regEmail">Email address</label>
-        <input type="email" class="form-control" id="regEmail" aria-describedby="emailHelp" placeholder="Enter email">
+        <label for="regUser">Username</label>
+        <input type="Username" class="form-control" id="regUser" aria-describedby="userHelp" placeholder="Enter username">
+
+        <label for="regEmail" class="email-label">Email</label>
+        <input type="email" class="form-control" id="regEmail" aria-describedby="emailHelp" placeholder="Enter username">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         <br>
       <!-- </div> -->
@@ -60,12 +65,73 @@
         <label for="regPass" class="password-label">Password</label>
         <input type="password" class="form-control" id="regPass" placeholder="Password">
       <!-- </div> -->
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="submit" class="btn btn-primary" id="regBtn">Register</button>
     <!-- </form> -->
   </div>
 
   <div id="result" class="row">
   </div>
+
+  <div class="form-product">
+    <!--add a product-->
+    <form id="addProductForm" class="bg-dark py-5 px-5">
+      <h1 class="text-primary"> Add Product Form </h1>   <br><br>
+      <!-- <label class="mr-5" for="a-productId"> Enter product Id: </label>
+      <input type="text" class="ml-5 rounded-pill" id="a-productId" name="inputId" >
+      <br><br> -->
+
+      <label class="mr-4" for="a-name"> Enter name of the product </label>
+      <input type="text" id="a-name" name="productName" class="rounded-pill">
+      <br><br>
+
+      <label class="mr-4" for="a-price"> Enter price of the product </label>
+      <input type="number" id="a-price" name="productPrice" class="rounded-pill">
+      <br><br>
+
+       <label class="mr-5" for="a-imageurl"> Enter the image url </label>
+      <input type="text" class="ml-5 rounded-pill" id="a-imageurl" name="a-imageurl" >
+      <br><br>
+
+      <button id="addProduct" name="productButton" type="submit" class="btn btn-primary rounded-pill">Add product</button>
+    </form>
+  </div>
+
+  <div class="form-update">
+    <!-- Input product details for update -->
+      <div id="inputIdDiv" class="">
+        <form id="productForm" class="py-5 px-5">
+          <h1 class="text-primary"> Update Product Form </h1>   <br><br>
+          <label class="mr-5" for="productId"> Enter product Id: </label>
+          <input type="text" class="ml-5 rounded-pill" id="productId" name="inputId" >
+          <br><br>
+
+          <label class="mr-4" for="productName"> Enter name of the product </label>
+          <input type="text" id="productName" name="productName" class="rounded-pill">
+          <br><br>
+
+          <label class="mr-4" for="productPrice"> Enter price of the product </label>
+          <input type="number" id="productPrice" name="productPrice" class="rounded-pill">
+          <br><br>
+
+          <label class="mr-5" for="imageurl"> Enter the image url </label>
+         <input type="text" class="ml-5 rounded-pill" id="imageurl" name="imageurl" >
+         <br><br>
+
+          <button id="updateProduct" name="productButton" type="submit" class="btn btn-primary rounded-pill">Update product</button>
+        </form>
+      </div>
+  </div>
+
+  <div class="form-delete">
+    <!-- Delete a product -->
+    <form id="delForm" class="">
+      <label class="mr-5" for="delProductId"> Enter product Id to delete: </label>
+      <input type="text" class="ml-5 rounded-pill" id="delProductId" name="inputId" >
+      <br><br>
+        <button id="deleteProduct" name="productButton" type="submit" class="btn btn-primary rounded-pill">Delete product</button>
+    </form>
+  </div>
+
 
   <script src="../front-end/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../front-end/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

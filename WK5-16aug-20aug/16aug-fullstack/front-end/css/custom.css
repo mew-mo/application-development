@@ -16,7 +16,9 @@ div {
   margin-top: 20px;
 }
 .form-login .password-label,
-.form-register .password-label {
+.form-login .email-label,
+.form-register .password-label,
+.form-register .email-label {
   margin-top: 20px;
 }
 
